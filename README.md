@@ -12,7 +12,7 @@ I did that by changing "use_json" to "T" in /usr/local/zeek/share/zeek/base/fram
 const use_json = T &redef;
 
 Then, in /etc/filebeat/modules.d/zeek.yml added var.paths to all logging options:
-
+[code]
 - module: zeek
   # All logs
   connection:
@@ -33,3 +33,4 @@ Then, in /etc/filebeat/modules.d/zeek.yml added var.paths to all logging options
   notice:
     enabled: true
     var.paths: ["/usr/local/zeek/logs/current/notice.log*"]
+[/code]
