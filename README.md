@@ -13,10 +13,10 @@ https://www.elastic.co/guide/en/beats/filebeat/master/filebeat-module-zeek.html
 
 First out you need to change the ascii-logger to log in json format:
 
-I did that by changing "use_json" to "T" in /usr/local/zeek/share/zeek/base/frameworks/logging/writers/ascii.zeek
-const use_json = T &redef;
+I did that by changing `use_json` to `T` in `/usr/local/zeek/share/zeek/base/frameworks/logging/writers/ascii.zeek`
+`const use_json = T &redef;`
 
-Then, in /etc/filebeat/modules.d/zeek.yml added var.paths to all logging options:
+Then, in `/etc/filebeat/modules.d/zeek.yml` I added `var.paths` to all logging options:
 ```
 - module: zeek
   # All logs
